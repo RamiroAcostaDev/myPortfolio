@@ -20,7 +20,7 @@ export default function Hero() {
         <Container sx={{background: '#181D2A'}}>
                  
                  <Box 
-                     height={'100vh'}
+                     height={'80vh'}
                      display={'flex'}
                      justifyContent={'center'}
                      alignItems={'center'}
