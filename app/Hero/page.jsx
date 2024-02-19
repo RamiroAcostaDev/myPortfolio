@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
    
-        <Container sx={{background: 'linear-gradient(to bottom, rgb(123, 8, 255, 0.9), rgb(123, 8, 255,0.87))'}}>
+        <Container sx={{background: '#181D2A'}}>
                  
                  <Box 
                      height={'100vh'}
@@ -32,28 +32,32 @@ export default function Hero() {
                             fontSize={20} 
                             fontWeight="Bold"
                             color={'primary'}
-                            className={`${BrunoAce.className} antialiased`}
-                            >
-                            Hola, soy</Typography>
+                            className={`${BrunoAce.className} antialiased`}>Hola, soy</Typography>
+                                                
+                         <Typography 
+                             variant="h1" 
+                             fontSize={90} 
+                             fontWeight="Bold"
+                             sx={{
+                                background: 'linear-gradient(to right, #F220C4, #7761FF)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                              }}
+                             lineHeight={1}
+                             className={`${allertaStencil.className} antialiased`}>Ramiro</Typography>
                                                 
                          <Typography 
                              variant="h1" 
                              fontSize={90} 
                              fontWeight="Bold"
                              color={'primary'}
-                             lineHeight={1}
-                             className={`${allertaStencil.className} antialiased`}
-                             >
-                            Ramiro</Typography>
-                                                
-                         <Typography 
-                             variant="h1" 
-                             fontSize={90} 
-                             fontWeight="Bold"
-                             color={'primary'}
                              className={`${allertaStencil.className} antialiased`}
                              lineHeight={1}
-                             >Acosta</Typography>
+                             sx={{
+                                background: 'linear-gradient(to right, #F220C4, #7761FF)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                              }}>Acosta</Typography>
                                                
                          <Typography 
                              variant="h2" 
