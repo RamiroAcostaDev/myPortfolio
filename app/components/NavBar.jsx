@@ -1,34 +1,3 @@
-// import * as React from 'react';
-
-// import { Typography, AppBar, Box, Toolbar, IconButton} from '@mui/material';
-// import MenuIcon from '@mui/icons-material/Menu';
-
-// export default function NavBar() {
-//   return (
-//     <Box 
-//         sx={{ flexGrow: 1}}>
-//       <AppBar position="sticky" sx={{background: 'linear-gradient(to right, #F220C4, #342054)'}}>
-//         <Toolbar>
-//           <Typography
-//           variant="h6"
-//           >Hola
-//           </Typography> 
-           
-//           <IconButton
-//             size="large"
-//             edge="end"
-//             color={'primary'}
-//             aria-label="menu"
-//             sx={{ mr: 2 }}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-          
-//         </Toolbar>
-//       </AppBar>
-//     </Box>
-//   );
-// }
 'use client'
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
@@ -39,7 +8,6 @@ import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -48,8 +16,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import AboutIcon from '../assets/svg/AboutIcon';
+import ContactIcon from '../assets/svg/ContactIcon';
+import EducationIcon from '../assets/svg/EducationIcon';
+import HomeIcon from '../assets/svg/HomeIcon';
+import ProjectsIcon from '../assets/svg/ProjectsIcon';
+import SkillsIcon from '../assets/svg/SkillsIcon';
+import Logo from '../assets/svg/Logo';
 
 const drawerWidth = 240;
 
@@ -122,9 +95,9 @@ export default function PersistentDrawerRight() {
       <CssBaseline />
       <AppBar position="fixed" open={open} sx={{background: 'linear-gradient(to right, #F220C4, #342054)'}}>
         <Toolbar>
-          <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-            LOGO
-          </Typography>
+          <Box  noWrap sx={{ flexGrow: 1 }} component="div">
+            <Logo IconColor={'white'}/>
+          </Box>
           <IconButton
             color="primary"
             aria-label="open drawer"
@@ -163,11 +136,19 @@ export default function PersistentDrawerRight() {
         </DrawerHeader>
       
         <List sx={{color:"white"}}>
-          {['Inbox', 'Starred', 'Send email', 'Drafts', "lala"].map((text, index) => (
+          {['Inicio','Sobre mi', 'Habilidades', 'Proyectos', "Educación" , "Contacto"].map((text, index) => (
             <ListItem key={text} disablePadding >
               <ListItemButton >
-                <ListItemIcon sx={{color:"white"}}>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <ListItemIcon>
+                {(() => {
+                    switch (index) {
+                    case 0: return <HomeIcon IconColor={'white'}/>;
+                    case 1: return <AboutIcon IconColor={'white'}/>;
+                    case 2: return <SkillsIcon IconColor={'white'}/>;
+                    case 3: return <ProjectsIcon IconColor={'white'}/>;
+                    case 4: return <EducationIcon IconColor={'white'}/>;
+                    case 5: return <ContactIcon IconColor={'white'}/>;
+                }})()}
                 </ListItemIcon>
                 <ListItemText primary={text}/>
               </ListItemButton>
