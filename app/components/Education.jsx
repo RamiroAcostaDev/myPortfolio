@@ -10,7 +10,7 @@ export default function Projects() {
     <Container sx={{background: 'grey'}} id="Educación">
                  
     <Box 
-        height={'93vh'}
+        height={'100vh'}
         display={'flex'}
         justifyContent={'center'}
         alignItems={'center'}

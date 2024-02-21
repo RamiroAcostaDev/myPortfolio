@@ -10,7 +10,7 @@ export default function About() {
     <Container sx={{background: '#ffffff'}} id="Sobre mi">
                  
     <Box 
-        height={'93vh'}
+        height={'100vh'}
         display={'flex'}
         justifyContent={'center'}
         alignItems={'center'}

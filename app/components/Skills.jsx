@@ -10,7 +10,7 @@ export default function Skills() {
     <Container sx={{background: 'red'}} id="Habilidades">
                  
     <Box 
-        height={'93vh'}
+        height={'100vh'}
         display={'flex'}
         justifyContent={'center'}
         alignItems={'center'}
