@@ -7,11 +7,23 @@ const theme=createTheme({
     primary: {
       main: '#FFFFFF',
     },
-    secondary: {
+    secondaryText: {
       main: '#0000FF',
     },
     background: {
       default: '#181D2A',
+    },
+    primaryGradient: {
+      main: 'linear-gradient(to right, #F220C4, #7761FF)',
+    },
+    invertPrimaryGradient: {
+      main: 'linear-gradient(to right, #7761FF, #F220C4)',
+    },
+    secondaryGradient: {
+      main: 'linear-gradient(to right, #F220C4, #342054)',
+    },
+    invertSecondaryGradient: {
+      main: 'linear-gradient(to right, #342054, #F220C4)',
     },
   },
 }

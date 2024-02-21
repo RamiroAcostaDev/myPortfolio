@@ -23,13 +23,14 @@ import HomeIcon from '../assets/svg/HomeIcon';
 import ProjectsIcon from '../assets/svg/ProjectsIcon';
 import SkillsIcon from '../assets/svg/SkillsIcon';
 import Logo from '../assets/svg/Logo';
-
+import { Link } from 'react-scroll';
+import About from './About';
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(0),
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -93,9 +94,26 @@ export default function PersistentDrawerRight() {
   return (
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{background: 'linear-gradient(to right, #F220C4, #342054)'}}>
+      <AppBar position="fixed" open={open} sx={{
+           background: 'linear-gradient(270deg, #342054, #F220C4)',
+           backgroundSize: '200% 200%',
+           
+           animation: 'gradient 10s ease infinite',
+           "@keyframes gradient": {
+             '0%': {
+               backgroundPosition: '0% 50%',
+             },
+             '50%': {
+               backgroundPosition: '100% 50%',
+             },
+             '100%': {
+               backgroundPosition: '0% 50%',
+             },
+           },
+        
+        }}>
         <Toolbar>
-          <Box  noWrap sx={{ flexGrow: 1 }} component="div">
+          <Box noWrap sx={{ flexGrow: 1 }} component="div">
             <Logo IconColor={'white'}/>
           </Box>
           <IconButton
@@ -135,25 +153,30 @@ export default function PersistentDrawerRight() {
           </IconButton>
         </DrawerHeader>
       
-        <List sx={{color:"white"}}>
-          {['Inicio','Sobre mi', 'Habilidades', 'Proyectos', "Educación" , "Contacto"].map((text, index) => (
+        <List sx={{color:"#ffffff"}}>
+        
+          {["Inicio","Sobre mi", 'Habilidades', 'Proyectos', "Educación" , "Contacto"].map((text, index) => (
+            console.log(text),
+            <Link to={text} smooth={true} duration={300}>
             <ListItem key={text} disablePadding >
               <ListItemButton >
                 <ListItemIcon>
                 {(() => {
                     switch (index) {
-                    case 0: return <HomeIcon IconColor={'white'}/>;
-                    case 1: return <AboutIcon IconColor={'white'}/>;
-                    case 2: return <SkillsIcon IconColor={'white'}/>;
-                    case 3: return <ProjectsIcon IconColor={'white'}/>;
-                    case 4: return <EducationIcon IconColor={'white'}/>;
-                    case 5: return <ContactIcon IconColor={'white'}/>;
+                    case 0: return <HomeIcon IconColor={'#ffffff'}/>;
+                    case 1: return <AboutIcon IconColor={'#ffffff'}/>;
+                    case 2: return <SkillsIcon IconColor={'#ffffff'}/>;
+                    case 3: return <ProjectsIcon IconColor={'#ffffff'}/>;
+                    case 4: return <EducationIcon IconColor={'#ffffff'}/>;
+                    case 5: return <ContactIcon IconColor={'#ffffff'}/>;
                 }})()}
                 </ListItemIcon>
                 <ListItemText primary={text}/>
               </ListItemButton>
             </ListItem>
+            </Link>
           ))}
+          
         </List>
         
         
