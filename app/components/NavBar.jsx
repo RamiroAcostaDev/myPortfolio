@@ -164,38 +164,33 @@ export default function PersistentDrawerRight() {
             "Proyectos",
             "Educación",
             "Contacto",
-          ].map(
-            (text, index) => (
-              console.log(text),
-              (
-                <Link to={text} smooth={true} duration={300}>
-                  <ListItem key={text} disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon>
-                        {(() => {
-                          switch (index) {
-                            case 0:
-                              return <HomeIcon IconColor={"#ffffff"} />;
-                            case 1:
-                              return <AboutIcon IconColor={"#ffffff"} />;
-                            case 2:
-                              return <SkillsIcon IconColor={"#ffffff"} />;
-                            case 3:
-                              return <ProjectsIcon IconColor={"#ffffff"} />;
-                            case 4:
-                              return <EducationIcon IconColor={"#ffffff"} />;
-                            case 5:
-                              return <ContactIcon IconColor={"#ffffff"} />;
-                          }
-                        })()}
-                      </ListItemIcon>
-                      <ListItemText primary={text} />
-                    </ListItemButton>
-                  </ListItem>
-                </Link>
-              )
-            )
-          )}
+          ].map((text, index) => (
+            <Link to={text} smooth={true} duration={300}>
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {(() => {
+                      switch (index) {
+                        case 0:
+                          return <HomeIcon IconColor={"#ffffff"} />;
+                        case 1:
+                          return <AboutIcon IconColor={"#ffffff"} />;
+                        case 2:
+                          return <SkillsIcon IconColor={"#ffffff"} />;
+                        case 3:
+                          return <ProjectsIcon IconColor={"#ffffff"} />;
+                        case 4:
+                          return <EducationIcon IconColor={"#ffffff"} />;
+                        case 5:
+                          return <ContactIcon IconColor={"#ffffff"} />;
+                      }
+                    })()}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+          ))}
         </List>
       </Drawer>
     </Box>
