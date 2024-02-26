@@ -12,13 +12,14 @@ const RobotoFont = Roboto({
 
 export default function Hero() {
   return (
-    <Container sx={{ background: "#181D2A" }}>
+    <Container sx={{ background: "#181D2A" }} id="Inicio">
       <Box
         height={"100vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
+        pt={8}
       >
         <Typography
           variant="h3"
@@ -92,7 +93,7 @@ export default function Hero() {
           fontSize={25}
           fontWeight={500}
           color={"primary"}
-          lineHeight={3}
+          lineHeight={2}
           className={`${RobotoFont.className} antialiased`}
         >
           Software Developer

@@ -130,9 +130,9 @@ export default function PersistentDrawerRight() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Main open={open} id="Inicio">
+      {/* <Main open={open} id="Inicio">
         <DrawerHeader />
-      </Main>
+      </Main> */}
       <Drawer
         sx={{
           width: drawerWidth,
@@ -166,7 +166,7 @@ export default function PersistentDrawerRight() {
             "Contacto",
           ].map((text, index) => (
             <Link to={text} smooth={true} duration={300}>
-              <ListItem key={text} disablePadding>
+              <ListItem key={text} disablePadding onClick={handleDrawerClose}>
                 <ListItemButton>
                   <ListItemIcon>
                     {(() => {
