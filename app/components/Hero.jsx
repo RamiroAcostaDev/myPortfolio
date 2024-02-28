@@ -19,7 +19,6 @@ export default function Hero() {
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
-        pt={8}
       >
         <Typography
           variant="h3"

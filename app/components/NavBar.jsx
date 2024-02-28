@@ -130,9 +130,9 @@ export default function PersistentDrawerRight() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      {/* <Main open={open} id="Inicio">
+      <Main open={open} id="Inicio">
         <DrawerHeader />
-      </Main> */}
+      </Main>
       <Drawer
         sx={{
           width: drawerWidth,
