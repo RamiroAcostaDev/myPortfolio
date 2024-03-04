@@ -14,11 +14,13 @@ export default function Hero() {
   return (
     <Container sx={{ background: "#181D2A" }} id="Inicio">
       <Box
-        height={"93.5vh"}
+        // height={"93.5vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
+        paddingTop={{ xs: 35, lg: 20 }}
+        paddingBottom={{ xs: 40, lg: 20 }}
       >
         <Typography
           variant="h3"

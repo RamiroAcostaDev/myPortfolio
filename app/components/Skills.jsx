@@ -96,12 +96,14 @@ export default function Skills() {
       flexDirection={"column"}
     >
       <Box
-        height={"93.5vh"}
+        // height={"93.5vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
         gap={2}
+        paddingTop={{ xs: 9, lg: 20 }}
+        paddingBottom={{ xs: 10, lg: 20 }}
       >
         <Typography
           variant="h4"
