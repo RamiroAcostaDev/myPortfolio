@@ -1,36 +1,32 @@
-'use client'
+"use client";
 import "./globals.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 
-const theme=createTheme({
+const theme = createTheme({
   palette: {
     primary: {
-      main: '#FFFFFF',
+      main: "#ffffff",
     },
     secondaryText: {
-      main: '#0000FF',
+      main: "#0000FF",
     },
     background: {
-      default: '#181D2A',
+      default: "#181D2A",
     },
     primaryGradient: {
-      main: 'linear-gradient(to right, #F220C4, #7761FF)',
+      main: "linear-gradient(to right, #F220C4, #7761FF)",
     },
     invertPrimaryGradient: {
-      main: 'linear-gradient(to right, #7761FF, #F220C4)',
+      main: "linear-gradient(to right, #7761FF, #F220C4)",
     },
     secondaryGradient: {
-      main: 'linear-gradient(to right, #F220C4, #342054)',
+      main: "linear-gradient(to right, #F220C4, #342054)",
     },
     invertSecondaryGradient: {
-      main: 'linear-gradient(to right, #342054, #F220C4)',
+      main: "linear-gradient(to right, #342054, #F220C4)",
     },
   },
-}
-  
-);
-
-
+});
 
 // export const metadata = {};
 
