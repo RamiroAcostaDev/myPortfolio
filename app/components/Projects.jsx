@@ -1,34 +1,127 @@
-import { Container, Box , Typography} from '@mui/material'
-import { Allerta_Stencil , Bruno_Ace , Roboto} from "next/font/google";
+import { Container, Box, Typography, Tooltip, IconButton } from "@mui/material";
+import { Allerta_Stencil, Bruno_Ace, Roboto } from "next/font/google";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import GitHubIcon from "../assets/svg/GitHubIcon";
+import NetworkIcon from "../assets/svg/NetworkIcon";
+import Zoom from "@mui/material/Zoom";
 
+import { Noto_Sans_Thai } from "next/font/google";
+const NotoFont = Noto_Sans_Thai({
+  subsets: ["thai"],
+  weight: ["100", "200", "300", "400", "500", "700"],
+});
 
-const BrunoAce= Bruno_Ace({ subsets: ["latin"], weight: ["400"],});
+const ProjectsList = [
+  {
+    title: "Project 1",
+    description:
+      "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    img: "/img/project1.jpg",
+  },
+  {
+    title: "Project 2",
+    description:
+      "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    img: "/img/project2.jpg",
+  },
+  {
+    title: "Project 2",
+    description:
+      "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ",
+    img: "/img/project3.jpg",
+  },
+];
 
+const LinksIcons = [
+  {
+    name: "GitHub",
+    svg: <GitHubIcon IconColor={"#ffffff"} IconWidth={"30px"} />,
+    link: "https://github.com",
+  },
+  {
+    name: "Web",
+    svg: <NetworkIcon IconColor={"#ffffff"} IconWidth={"30px"} />,
+    link: "https://github.com",
+  },
+];
 
 export default function Projects() {
   return (
-    <Container sx={{background: 'green'}} id="Proyectos">
-                 
-    <Box 
-        height={'100vh'}
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        flexDirection={'column'}>
+    <Container sx={{ background: "#181D2A" }} id="Proyectos">
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDirection={"column"}
+        gap={5}
+        padding={3}
+      >
+        <Typography
+          variant="h4"
+          fontSize={{ xs: 30, lg: 40 }}
+          fontWeight="500"
+          color={"#ffffff"}
+          className={`${NotoFont.className} antialiased`}
+        >
+          Proyectos
+        </Typography>
 
-        
-            <Typography 
-               variant="h3" 
-               fontSize={20} 
-               fontWeight="Bold"
-               color={'black'}
-               className={`${BrunoAce.className} antialiased`}>Projects</Typography>
-                                   
-             
-               
-    </Box>
-
-</Container>
-
-  )
+        {ProjectsList.map(({ title, description, img }, index) => (
+          <Card
+            sx={{
+              maxWidth: 300,
+              background: "#181D2A",
+              border: "1px solid #ffffff",
+            }}
+            key={index}
+            elevation={0}
+          >
+            <CardMedia component="img" alt={title} height="140" image={img} />
+            <CardContent sx={{ backgroundColor: "#181D2A" }}>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                textAlign={"center"}
+                color={"#ffffff"}
+              >
+                {title}
+              </Typography>
+              <Typography
+                variant="body2"
+                color={"#ffffff"}
+                textAlign={"justify"}
+              >
+                {description}
+              </Typography>
+            </CardContent>
+            <CardActions
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                gap: 2,
+              }}
+            >
+              {LinksIcons.map(({ name, svg, link }, index) => (
+                <Tooltip
+                  title={name}
+                  key={index}
+                  TransitionComponent={Zoom}
+                  arrow
+                >
+                  <IconButton size="small" href={link}>
+                    {svg}
+                  </IconButton>
+                </Tooltip>
+              ))}
+            </CardActions>
+          </Card>
+        ))}
+      </Box>
+    </Container>
+  );
 }
