@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box, Typography, Divider } from "@mui/material";
 import { Allerta_Stencil, Bruno_Ace, Roboto } from "next/font/google";
+import { Fullscreen } from "@mui/icons-material";
 
 const allertaStencil = Allerta_Stencil({ subsets: ["latin"], weight: ["400"] });
 const BrunoAce = Bruno_Ace({ subsets: ["latin"], weight: ["400"] });
@@ -14,13 +15,12 @@ export default function Hero() {
   return (
     <Container sx={{ background: "#181D2A" }} id="Inicio">
       <Box
-        // height={"93.5vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
-        paddingTop={{ xs: 35, lg: 20 }}
-        paddingBottom={{ xs: 40, lg: 20 }}
+        paddingTop={{ xs: 25, lg: 20 }}
+        paddingBottom={{ xs: 27.7, lg: 20 }}
       >
         <Typography
           variant="h3"

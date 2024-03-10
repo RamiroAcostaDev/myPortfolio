@@ -1,4 +1,11 @@
-import { Container, Box, Typography, Tooltip, IconButton } from "@mui/material";
+import {
+  Container,
+  Box,
+  Typography,
+  Tooltip,
+  IconButton,
+  Divider,
+} from "@mui/material";
 import { Allerta_Stencil, Bruno_Ace, Roboto } from "next/font/google";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -58,7 +65,8 @@ export default function Projects() {
         alignItems={"center"}
         flexDirection={"column"}
         gap={5}
-        padding={3}
+        paddingTop={{ xs: 5, lg: 20 }}
+        paddingBottom={{ xs: 5, lg: 20 }}
       >
         <Typography
           variant="h4"
@@ -75,7 +83,8 @@ export default function Projects() {
             sx={{
               maxWidth: 300,
               background: "#181D2A",
-              border: "1px solid #ffffff",
+              border: "3px solid #ffffff",
+              borderRadius: "10px",
             }}
             key={index}
             elevation={0}
@@ -87,13 +96,19 @@ export default function Projects() {
                 variant="h5"
                 component="div"
                 textAlign={"center"}
+                fontSize={20}
+                fontWeight="400"
                 color={"#ffffff"}
+                className={`${NotoFont.className} antialiased`}
               >
                 {title}
               </Typography>
               <Typography
-                variant="body2"
+                variant="inherit"
+                fontSize={14}
+                fontWeight="300"
                 color={"#ffffff"}
+                className={`${NotoFont.className} antialiased`}
                 textAlign={"justify"}
               >
                 {description}

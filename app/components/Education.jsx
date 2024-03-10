@@ -1,5 +1,12 @@
-import { Container, Box, Typography } from "@mui/material";
-
+import {
+  Container,
+  Box,
+  Typography,
+  Tooltip,
+  IconButton,
+  Zoom,
+} from "@mui/material";
+import CvIcon from "../assets/svg/CvIcon";
 import { Noto_Sans_Thai } from "next/font/google";
 
 const NotoFont = Noto_Sans_Thai({
@@ -40,14 +47,15 @@ export default function Education() {
   return (
     <Container id="Educación">
       <Box
-        height={"100vh"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
         flexDirection={"column"}
-        gap={2}
+        paddingTop={{ xs: 5, lg: 20 }}
+        paddingBottom={{ xs: 5, lg: 20 }}
       >
         <Typography
+          pb={7}
           variant="h4"
           fontSize={{ xs: 30, lg: 40 }}
           fontWeight="500"
@@ -69,13 +77,34 @@ export default function Education() {
               alignContent={"space-between"}
             >
               <Box width={"120px"} display={"flex"} flexDirection={"column"}>
-                <Typography variant="h6" fontSize={8} textAlign={"center"}>
+                <Typography
+                  textAlign={"center"}
+                  variant="inherit"
+                  fontSize={14}
+                  fontWeight="300"
+                  color={"#ffffff"}
+                  className={`${NotoFont.className} antialiased`}
+                >
                   {title}
                 </Typography>
-                <Typography variant="p" fontSize={6} textAlign={"center"}>
+                <Typography
+                  variant="inherit"
+                  fontSize={14}
+                  fontWeight="300"
+                  color={"#ffffff"}
+                  className={`${NotoFont.className} antialiased`}
+                  textAlign={"center"}
+                >
                   {description}
                 </Typography>
-                <Typography variant="p" fontSize={6} textAlign={"center"}>
+                <Typography
+                  variant="inherit"
+                  fontSize={14}
+                  fontWeight="300"
+                  color={"#ffffff"}
+                  className={`${NotoFont.className} antialiased`}
+                  textAlign={"center"}
+                >
                   {date}
                 </Typography>
               </Box>
@@ -89,7 +118,8 @@ export default function Education() {
                   width={"40px"}
                   height={"50px"}
                   sx={{
-                    mt: "15px",
+                    mt: "50px",
+
                     borderWidth: !isLast
                       ? isEven
                         ? "3px 3px 0 0"
@@ -101,6 +131,22 @@ export default function Education() {
             </Box>
           );
         })}
+
+        <Box
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          pt={6}
+        >
+          <Tooltip title={"Curriculum Vitae"} TransitionComponent={Zoom} arrow>
+            <IconButton
+              size="small"
+              href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
+            >
+              <CvIcon IconColor={"#ffffff"} IconWidth={"60px"} />
+            </IconButton>
+          </Tooltip>
+        </Box>
       </Box>
     </Container>
   );

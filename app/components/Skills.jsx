@@ -96,14 +96,12 @@ export default function Skills() {
       flexDirection={"column"}
     >
       <Box
-        // height={"93.5vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
-        gap={2}
-        paddingTop={{ xs: 9, lg: 20 }}
-        paddingBottom={{ xs: 10, lg: 20 }}
+        paddingTop={{ xs: 5, lg: 20 }}
+        paddingBottom={{ xs: 4.5, lg: 20 }}
       >
         <Typography
           variant="h4"
@@ -120,7 +118,7 @@ export default function Skills() {
           justifyContent={"center"}
           alignItems={"center"}
           flexDirection={{ xs: "column", md: "row" }}
-          gap={3}
+          gap={1}
         >
           {/* code container */}
           <Box
@@ -130,7 +128,7 @@ export default function Skills() {
             justifyContent={"center"}
             alignItems={"center"}
             flexDirection={"column"}
-            gap={2}
+            gap={1}
           >
             <Box
               width={{ xs: "300px", lg: "500px" }}
@@ -152,24 +150,6 @@ export default function Skills() {
               flexWrap={"wrap"}
               gap={4}
               padding={2}
-              // sx={{
-              //   background: "linear-gradient(270deg, #F220C4, #7761FF)",
-              //   backgroundSize: "200% 200%",
-              //   WebkitBackgroundClip: "border-box",
-              //   WebkitTextFillColor: "transparent",
-              //   animation: "gradient 4s ease infinite",
-              //   "@keyframes gradient": {
-              //     "0%": {
-              //       backgroundPosition: "0% 50%",
-              //     },
-              //     "50%": {
-              //       backgroundPosition: "100% 50%",
-              //     },
-              //     "100%": {
-              //       backgroundPosition: "0% 50%",
-              //     },
-              //   },
-              // }}
             >
               {technologies.map((icon, index) => (
                 <Tooltip title={icon.name} TransitionComponent={Zoom} arrow>
@@ -180,11 +160,10 @@ export default function Skills() {
           </Box>
           {/* database and tools container */}
           <Box
-            height={{ xs: "400px", lg: "500px" }}
             width={{ xs: "300px", lg: "500px" }}
             display={"flex"}
             flexDirection={"column"}
-            gap={2}
+            gap={1}
           >
             {/* database container */}
             <Box
@@ -193,8 +172,8 @@ export default function Skills() {
               alignItems={"center"}
               flexDirection={"column"}
               width={{ xs: "300px", lg: "500px" }}
-              height={{ xs: "200px", lg: "250" }}
-              gap={2}
+              height={{ xs: "150px", lg: "250" }}
+              gap={1}
             >
               {/* database box */}
               <Box
@@ -231,8 +210,8 @@ export default function Skills() {
               alignItems={"center"}
               flexDirection={"column"}
               width={{ xs: "300px", lg: "500px" }}
-              height={{ xs: "200px", lg: "250" }}
-              gap={2}
+              height={{ xs: "150px", lg: "250" }}
+              gap={1}
             >
               {/* tools box */}
               <Box
