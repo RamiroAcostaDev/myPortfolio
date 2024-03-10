@@ -7,7 +7,7 @@ import {
   FormControl,
 } from "@mui/material";
 import LinkedinIcon from "../assets/svg/LinkedinIcon";
-import GithubIcon from "../assets/svg/GithubIcon";
+import GitHubIcon from "../assets/svg/GitHubIcon";
 import MailIcon from "../assets/svg/MailIcon";
 
 import { Noto_Sans_Thai } from "next/font/google";
@@ -140,7 +140,7 @@ export default function Projects() {
               size="small"
               href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
             >
-              <GithubIcon IconColor={"#ffffff"} IconWidth={30} />
+              <GitHubIcon IconColor={"#ffffff"} IconWidth={30} />
             </IconButton>
           </Box>
         </Box>
