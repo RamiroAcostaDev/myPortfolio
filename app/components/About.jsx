@@ -11,14 +11,13 @@ export default function About() {
   return (
     <Container id="Sobre mi">
       <Box
-        // height={"93.5vh"}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
-        gap={2}
-        paddingTop={{ xs: 9, lg: 20 }}
-        paddingBottom={{ xs: 10, lg: 20 }}
+        gap={1}
+        paddingTop={{ xs: 5, lg: 20 }}
+        paddingBottom={{ xs: 4.1, lg: 20 }}
       >
         <Typography
           variant="h4"
@@ -30,12 +29,11 @@ export default function About() {
           Sobre mi
         </Typography>
         <Box
-          height={{ xs: "700px", lg: "856px" }}
+          height={{ xs: "550px", lg: "856px" }}
           width={"100%"}
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
-          gap={{ xs: 5, lg: 10 }}
           flexDirection={{ xs: "column", md: "row" }}
         >
           <Box
@@ -63,6 +61,7 @@ export default function About() {
           >
             <Typography
               variant="inherit"
+              width={{ xs: 300, lg: 500 }}
               fontSize={14}
               fontWeight="300"
               color={"#ffffff"}
@@ -76,10 +75,7 @@ export default function About() {
               aut omnis molestiae tenetur obcaecati quam, perspiciatis expedita
               repellat voluptate quae tempora sed ducimus et, nostrum quos
               maiores sint! Temporibus minima dolorem autem ullam! Voluptates,
-              eos. Ipsum modi obcaecati sit, excepturi commodi ea quia, laborum
-              libero esse quaerat, beatae ipsam necessitatibus provident eos
-              veritatis assumenda fugiat corrupti iste eum. Reprehenderit autem
-              porro sit corrupti. Incidunt, dolores. Eos perspiciatis.
+              eos.
             </Typography>
           </Box>
         </Box>
