@@ -1,5 +1,9 @@
 "use client";
 import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 import { Container, Box, Typography, Divider } from "@mui/material";
 import { Allerta_Stencil, Bruno_Ace, Roboto } from "next/font/google";
 import { Fullscreen } from "@mui/icons-material";
@@ -12,6 +16,9 @@ const RobotoFont = Roboto({
 });
 
 export default function Hero() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Container sx={{ background: "#181D2A" }} id="Inicio">
       <Box
@@ -28,6 +35,7 @@ export default function Hero() {
           fontWeight="Bold"
           color={"primary"}
           className={`${BrunoAce.className} antialiased`}
+          data-aos="zoom-in"
         >
           Hola, soy
         </Typography>
@@ -56,6 +64,7 @@ export default function Hero() {
               },
             },
           }}
+          data-aos="zoom-in"
         >
           Ramiro
         </Typography>
@@ -85,6 +94,7 @@ export default function Hero() {
               },
             },
           }}
+          data-aos="zoom-in"
         >
           Acosta
         </Typography>
@@ -96,6 +106,7 @@ export default function Hero() {
           color={"primary"}
           lineHeight={2}
           className={`${RobotoFont.className} antialiased`}
+          data-aos="zoom-in"
         >
           Software Developer
         </Typography>

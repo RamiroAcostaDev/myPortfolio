@@ -5,52 +5,24 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import { Divider, Box } from "@mui/material";
+import DividerComponent from "./components/DividerComponent";
+import { Box } from "@mui/material";
 
 export default function Home() {
   return (
     <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
       <NavBar />
       <Hero />
-      <Divider
-        sx={{
-          width: "300px",
-          height: "1px",
-          backgroundColor: "#F220C4",
-        }}
-      />
+      <DividerComponent />
       <About />
-      <Divider
-        sx={{
-          width: "300px",
-          height: "1px",
-          backgroundColor: "#F220C4",
-        }}
-      />
+      <DividerComponent />
+
       <Skills />
-      <Divider
-        sx={{
-          width: "300px",
-          height: "1px",
-          backgroundColor: "#F220C4",
-        }}
-      />
+      <DividerComponent />
       <Projects />
-      <Divider
-        sx={{
-          width: "300px",
-          height: "1px",
-          backgroundColor: "#F220C4",
-        }}
-      />
+      <DividerComponent />
       <Education />
-      <Divider
-        sx={{
-          width: "300px",
-          height: "1px",
-          backgroundColor: "#F220C4",
-        }}
-      />
+      <DividerComponent />
       <Contact />
     </Box>
   );

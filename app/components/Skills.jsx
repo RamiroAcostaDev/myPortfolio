@@ -226,19 +226,46 @@ export default function Skills() {
               <Box
                 width={{ xs: "300px", lg: "450px" }}
                 height={{ xs: "100px", lg: "150px" }}
-                border={"3px solid white"}
                 borderRadius={"10px"}
                 display={"flex"}
                 justifyContent={"center"}
                 alignItems={"center"}
-                flexWrap={"wrap"}
-                gap={4}
+                sx={{
+                  background: "linear-gradient(270deg, #F220C4, #7761FF)",
+                  backgroundSize: "200% 200%",
+                  WebkitBackgroundClip: "box",
+                  WebkitTextFillColor: "transparent",
+                  animation: "gradient 4s ease infinite",
+                  "@keyframes gradient": {
+                    "0%": {
+                      backgroundPosition: "0% 50%",
+                    },
+                    "50%": {
+                      backgroundPosition: "100% 50%",
+                    },
+                    "100%": {
+                      backgroundPosition: "0% 50%",
+                    },
+                  },
+                }}
               >
-                {tools.map((icon, index) => (
-                  <Tooltip title={icon.name} TransitionComponent={Zoom} arrow>
-                    <IconButton>{icon.icon}</IconButton>
-                  </Tooltip>
-                ))}
+                <Box
+                  width={{ xs: "300px", lg: "450px" }}
+                  height={{ xs: "100px", lg: "150px" }}
+                  border={"3px solid transparent"}
+                  borderRadius={"10px"}
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  flexWrap={"wrap"}
+                  gap={4}
+                >
+                  {tools.map((icon, index) => (
+                    <Tooltip title={icon.name} TransitionComponent={Zoom} arrow>
+                      <IconButton>{icon.icon}</IconButton>
+                    </Tooltip>
+                  ))}
+                </Box>
               </Box>
             </Box>
           </Box>
