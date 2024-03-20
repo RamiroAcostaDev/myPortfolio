@@ -14,6 +14,7 @@ import {
 import CvIcon from "../assets/svg/CvIcon";
 import { Noto_Sans_Thai } from "next/font/google";
 import { useState } from "react";
+import BlurCard from "./BlurCard";
 
 const NotoFont = Noto_Sans_Thai({
   subsets: ["thai"],
@@ -74,88 +75,7 @@ export default function Education() {
         >
           Educacion
         </Typography>
-
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center",
-            m: 1,
-            position: "relative", // Added to position the overlay
-          }}
-        >
-          <Box
-            sx={{
-              width: 300,
-              height: 128,
-              borderRadius: 2,
-              position: "relative", // Added to position the overlay
-            }}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            onClick={handleClick}
-            tabIndex={0} // Make the Box focusable
-          >
-            <Box
-              sx={{
-                backgroundImage: `url(/img/project1.jpg)`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                width: "100%",
-                height: "100%",
-                filter: isClicked ? "blur(5px)" : "none",
-                transition: "filter 0.3s ease",
-                position: "absolute",
-                borderRadius: 2,
-              }}
-            />
-            {isClicked && (
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: 2,
-                  backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
-                }}
-              />
-            )}
-          </Box>
-          {isClicked ? (
-            <Typography
-              variant="inherit"
-              color={"#ffffff"}
-              sx={{
-                position: "absolute", // Position Typography over the blurred Box
-                opacity: 1,
-                transition: "opacity 0.3s ease",
-              }}
-              textAlign={"center"}
-              fontSize={14}
-              fontWeight="300"
-              className={`${NotoFont.className} antialiased`}
-            >
-              hola
-            </Typography>
-          ) : (
-            <Typography
-              variant="p"
-              color={"#ffffff"}
-              className={`${NotoFont.className} antialiased`}
-              sx={{
-                position: "absolute", // Position Typography over the blurred Box
-                opacity: 0,
-                transition: "opacity 0.3s ease",
-              }}
-            >
-              Hola
-            </Typography>
-          )}
-        </Box>
+        <BlurCard />
       </Box>
     </Container>
   );

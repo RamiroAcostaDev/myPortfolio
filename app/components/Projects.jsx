@@ -15,6 +15,7 @@ import Button from "@mui/material/Button";
 import GitHubIcon from "../assets/svg/GitHubIcon";
 import NetworkIcon from "../assets/svg/NetworkIcon";
 import Zoom from "@mui/material/Zoom";
+import BlurCard from "./BlurCard";
 
 import { Noto_Sans_Thai } from "next/font/google";
 const NotoFont = Noto_Sans_Thai({
@@ -25,20 +26,17 @@ const NotoFont = Noto_Sans_Thai({
 const ProjectsList = [
   {
     title: "Project 1",
-    description:
-      "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    description: "loremp ipsum dolor sit amet, consectetur adipiscing elit",
     img: "/img/project1.jpg",
   },
   {
     title: "Project 2",
-    description:
-      "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    description: "loremp ipsum dolor sit amet, consectetur adipiscing elit",
     img: "/img/project2.jpg",
   },
   {
     title: "Project 2",
-    description:
-      "loremp ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ",
+    description: "loremp ipsum dolor sit amet, consectetur adipiscing elit",
     img: "/img/project3.jpg",
   },
 ];
@@ -77,75 +75,81 @@ export default function Projects() {
         >
           Proyectos
         </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            flexDirection: "row",
-          }}
-        >
-          {ProjectsList.map(({ title, description, img }, index) => (
-            <Card
-              sx={{
-                maxWidth: 300,
-                background: "#181D2A",
-                border: "3px solid #ffffff",
-                borderRadius: "10px",
-                m: 1,
-              }}
-              key={index}
-              elevation={0}
-            >
-              <CardMedia component="img" alt={title} height="140" image={img} />
-              <CardContent sx={{ backgroundColor: "#181D2A" }}>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  textAlign={"center"}
-                  fontSize={20}
-                  fontWeight="400"
-                  color={"#ffffff"}
-                  className={`${NotoFont.className} antialiased`}
-                >
-                  {title}
-                </Typography>
-                <Typography
-                  variant="inherit"
-                  fontSize={14}
-                  fontWeight="300"
-                  color={"#ffffff"}
-                  className={`${NotoFont.className} antialiased`}
-                  textAlign={"justify"}
-                >
-                  {description}
-                </Typography>
-              </CardContent>
-              <CardActions
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: 2,
-                }}
-              >
-                {LinksIcons.map(({ name, svg, link }, index) => (
-                  <Tooltip
-                    title={name}
-                    key={index}
-                    TransitionComponent={Zoom}
-                    arrow
-                  >
-                    <IconButton size="small" href={link}>
-                      {svg}
-                    </IconButton>
-                  </Tooltip>
-                ))}
-              </CardActions>
-            </Card>
-          ))}
-        </Box>
+        {ProjectsList.map(({ title, description, img }, index) => (
+          <BlurCard
+            key={index}
+            cardTitle={title}
+            cardDescription={description}
+            cardBackground={img}
+          />
+        ))}
       </Box>
     </Container>
   );
+}
+
+{
+  /* <Box
+  sx={{
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    flexDirection: "row",
+  }}
+>
+  {ProjectsList.map(({ title, description, img }, index) => (
+    <Card
+      sx={{
+        maxWidth: 300,
+        background: "#181D2A",
+        border: "3px solid #ffffff",
+        borderRadius: "10px",
+        m: 1,
+      }}
+      key={index}
+      elevation={0}
+    >
+      <CardMedia component="img" alt={title} height="140" image={img} />
+      <CardContent sx={{ backgroundColor: "#181D2A" }}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          textAlign={"center"}
+          fontSize={20}
+          fontWeight="400"
+          color={"#ffffff"}
+          className={`${NotoFont.className} antialiased`}
+        >
+          {title}
+        </Typography>
+        <Typography
+          variant="inherit"
+          fontSize={14}
+          fontWeight="300"
+          color={"#ffffff"}
+          className={`${NotoFont.className} antialiased`}
+          textAlign={"justify"}
+        >
+          {description}
+        </Typography>
+      </CardContent>
+      <CardActions
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 2,
+        }}
+      >
+        {LinksIcons.map(({ name, svg, link }, index) => (
+          <Tooltip title={name} key={index} TransitionComponent={Zoom} arrow>
+            <IconButton size="small" href={link}>
+              {svg}
+            </IconButton>
+          </Tooltip>
+        ))}
+      </CardActions>
+    </Card>
+  ))}
+</Box>; */
 }
