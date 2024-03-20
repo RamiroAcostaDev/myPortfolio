@@ -102,6 +102,19 @@ export default function Projects() {
               label="Comentarios"
               multiline
               rows={4}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "white",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "white",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "white",
+                  },
+                },
+              }}
               InputLabelProps={{
                 style: {
                   color: "#ffffff",
