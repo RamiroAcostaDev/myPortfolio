@@ -4,9 +4,8 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import { Container, Box, Typography, Divider } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import { Allerta_Stencil, Bruno_Ace, Roboto } from "next/font/google";
-import { Fullscreen } from "@mui/icons-material";
 
 const allertaStencil = Allerta_Stencil({ subsets: ["latin"], weight: ["400"] });
 const BrunoAce = Bruno_Ace({ subsets: ["latin"], weight: ["400"] });
