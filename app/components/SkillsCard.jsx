@@ -10,7 +10,7 @@ const NotoFont = Noto_Sans_Thai({
 export default function SkillsCard({ titleIcon, titleCard, iconsList }) {
   return (
     <Box
-      width={{ xs: "300px", lg: "500px" }}
+      width={{ xs: "300px", md: "500px" }}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
