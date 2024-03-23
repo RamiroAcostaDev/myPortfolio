@@ -5,7 +5,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import DividerComponent from "./components/DividerComponent";
 import { Box } from "@mui/material";
 
 export default function Home() {
@@ -13,16 +12,10 @@ export default function Home() {
     <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
       <NavBar />
       <Hero />
-      <DividerComponent />
       <About />
-      <DividerComponent />
-
       <Skills />
-      <DividerComponent />
       <Projects />
-      <DividerComponent />
       <Education />
-      <DividerComponent />
       <Contact />
     </Box>
   );
