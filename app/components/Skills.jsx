@@ -87,7 +87,7 @@ export default function Skills() {
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
-        flexDirection={{ xs: "column", lg: "row" }}
+        flexDirection={"column"}
         gap={5}
         paddingTop={{ xs: 5, lg: 20 }}
         paddingBottom={{ xs: 5, lg: 20 }}
@@ -98,28 +98,32 @@ export default function Skills() {
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
-          flexDirection={{ xs: "column", lg: "row" }}
+          flexDirection={"column"}
           gap={4}
         >
-          <SkillCard
-            titleIcon={
-              <TerminalIcon IconColor={"#ffffff"} IconWidth={"50px"} />
-            }
-            titleCard={"Tecnologias"}
-            iconsList={technologies}
-          />
-          <SkillCard
-            titleIcon={
-              <DataBaseIcon IconColor={"#ffffff"} IconWidth={"50px"} />
-            }
-            titleCard={"Bases de datos"}
-            iconsList={dataBase}
-          />
-          <SkillCard
-            titleIcon={<ConfigIcon IconColor={"#ffffff"} IconWidth={"50px"} />}
-            titleCard={"Herramientas"}
-            iconsList={tools}
-          />
+          <Box>
+            <SkillCard
+              titleIcon={
+                <TerminalIcon IconColor={"#ffffff"} IconWidth={"50px"} />
+              }
+              titleCard={"Tecnologias"}
+              iconsList={technologies}
+            />
+            <SkillCard
+              titleIcon={
+                <DataBaseIcon IconColor={"#ffffff"} IconWidth={"50px"} />
+              }
+              titleCard={"Bases de datos"}
+              iconsList={dataBase}
+            />
+            <SkillCard
+              titleIcon={
+                <ConfigIcon IconColor={"#ffffff"} IconWidth={"50px"} />
+              }
+              titleCard={"Herramientas"}
+              iconsList={tools}
+            />
+          </Box>
         </Box>
       </Box>
     </Container>
