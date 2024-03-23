@@ -25,8 +25,8 @@ export default function Hero() {
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
-        paddingTop={{ xs: 25, lg: 20 }}
-        paddingBottom={{ xs: 27.7, lg: 20 }}
+        paddingTop={{ xs: 25, md: "23vh" }}
+        paddingBottom={{ xs: 27.7, md: "40vh" }}
       >
         <Typography
           variant="h3"
