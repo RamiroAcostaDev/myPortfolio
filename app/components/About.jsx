@@ -18,7 +18,7 @@ export default function About() {
         alignItems={"center"}
         flexDirection={"column"}
         gap={5}
-        paddingTop={{ xs: 5, lmd: 10 }}
+        paddingTop={{ xs: 5, md: 10 }}
         paddingBottom={{ xs: 10, md: 20 }}
       >
         <TitleSections titleContent={"Sobre mi"} />
