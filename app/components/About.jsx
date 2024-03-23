@@ -1,6 +1,6 @@
 import { Container, Box, Typography, Avatar } from "@mui/material";
 import TitleSections from "./TitleSections";
-import Aos from "aos";
+
 import "aos/dist/aos.css";
 import { Noto_Sans_Thai } from "next/font/google";
 
