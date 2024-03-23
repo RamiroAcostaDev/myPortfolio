@@ -11,14 +11,14 @@ const NotoFont = Noto_Sans_Thai({
 
 export default function About() {
   return (
-    <Container id="Sobre mi">
+    <Container id="Sobre mi" sx={{ backgroundColor: "#21293B" }}>
       <Box
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={{ xs: "column", lg: "row" }}
         gap={5}
-        paddingTop={{ xs: 10, lg: 20 }}
+        paddingTop={{ xs: 5, lg: 20 }}
         paddingBottom={{ xs: 10, lg: 20 }}
       >
         <TitleSections titleContent={"Sobre mi"} />

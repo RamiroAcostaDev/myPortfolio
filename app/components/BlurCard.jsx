@@ -4,7 +4,7 @@ import { Box, Typography, IconButton } from "@mui/material";
 import { Noto_Sans_Thai } from "next/font/google";
 import GitHubIcon from "../assets/svg/GitHubIcon";
 import NetworkIcon from "../assets/svg/NetworkIcon";
-import Aos from "aos";
+
 import "aos/dist/aos.css";
 
 const NotoFont = Noto_Sans_Thai({
