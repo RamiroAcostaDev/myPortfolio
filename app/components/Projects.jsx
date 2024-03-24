@@ -14,7 +14,7 @@ const ProjectsList = [
     img: "/img/project2.jpg",
   },
   {
-    title: "Project 2",
+    title: "Project 3",
     description: "loremp ipsum dolor sit amet, consectetur adipiscing elit",
     img: "/img/project3.jpg",
   },
@@ -27,20 +27,27 @@ export default function Projects() {
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
-        flexDirection={{ xs: "column", lg: "row" }}
+        flexDirection={"column"}
         gap={5}
-        paddingTop={{ xs: 5, lg: 20 }}
-        paddingBottom={{ xs: 5, lg: 20 }}
+        paddingTop={{ xs: 5, md: 10 }}
+        paddingBottom={{ xs: 5, md: 13 }}
       >
         <TitleSections titleContent={"Proyectos"} />
-        {ProjectsList.map(({ title, description, img }, index) => (
-          <BlurCard
-            key={index}
-            cardTitle={title}
-            cardDescription={description}
-            cardBackground={img}
-          />
-        ))}
+        <Box
+          display={"flex"}
+          flexDirection={{ xs: "column", md: "row" }}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          {ProjectsList.map(({ title, description, img }, index) => (
+            <BlurCard
+              key={index}
+              cardTitle={title}
+              cardDescription={description}
+              cardBackground={img}
+            />
+          ))}
+        </Box>
       </Box>
     </Container>
   );
