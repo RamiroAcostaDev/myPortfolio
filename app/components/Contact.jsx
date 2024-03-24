@@ -66,7 +66,7 @@ export default function Projects() {
               align={"center"}
               data-aos="zoom-in"
             >
-              También puedes visitar mis redes sociales.
+              También puedes visitar mis redes sociales
             </Typography>
             <Box
               display={"flex"}
