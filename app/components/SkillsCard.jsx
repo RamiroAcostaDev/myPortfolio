@@ -16,6 +16,7 @@ export default function SkillsCard({ titleIcon, titleCard, iconsList }) {
       justifyContent={"center"}
       alignItems={"center"}
       gap={1}
+      data-aos="zoom-in"
     >
       <Box
         display={"flex"}

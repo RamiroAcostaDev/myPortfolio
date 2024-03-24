@@ -1,6 +1,11 @@
-import { Box, IconButton, TextField } from "@mui/material";
+import { Box, IconButton, TextField, Typography } from "@mui/material";
 import MailIcon from "../assets/svg/MailIcon";
+import { Noto_Sans_Thai } from "next/font/google";
 
+const NotoFont = Noto_Sans_Thai({
+  subsets: ["thai"],
+  weight: ["100", "200", "300", "400", "500", "700"],
+});
 export default function ContactForm() {
   return (
     <Box
@@ -9,6 +14,11 @@ export default function ContactForm() {
       flexDirection={"column"}
       gap={2}
       color="#ffffff"
+      backgroundColor="#21293B"
+      padding={2}
+      borderRadius={2}
+      boxShadow={5}
+      data-aos="zoom-in"
     >
       <TextField
         id="Nombre"
@@ -85,7 +95,7 @@ export default function ContactForm() {
         display={"flex"}
         justifyContent={"center"}
         alignContent={"center"}
-        gap={4}
+        flexDirection={"column"}
       >
         <IconButton
           size="small"
@@ -93,6 +103,16 @@ export default function ContactForm() {
         >
           <MailIcon IconColor={"#ffffff"} IconWidth={35} />
         </IconButton>
+        <Typography
+          variant="p"
+          color="#ffffff"
+          fontSize={12}
+          fontWeight="300"
+          className={`${NotoFont.className} antialiased`}
+          align="center"
+        >
+          Enviar
+        </Typography>
       </Box>
     </Box>
   );
