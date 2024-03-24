@@ -50,24 +50,44 @@ export default function Projects() {
           <ContactForm />
 
           <Box
-            pt={2}
             display={"flex"}
             justifyContent={"center"}
             alignContent={"center"}
+            flexDirection={"column"}
             gap={4}
           >
-            <IconButton
-              size="small"
-              href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
+            <Typography
+              variant="p"
+              color="#ffffff"
+              fontSize={14}
+              fontWeight="300"
+              width={{ xs: 300, lg: 500 }}
+              className={`${NotoFont.className} antialiased`}
+              align={"center"}
+              data-aos="zoom-in"
             >
-              <LinkedinIcon IconColor={"#ffffff"} IconWidth={35} />
-            </IconButton>
-            <IconButton
-              size="small"
-              href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
+              También puedes visitar mis redes sociales.
+            </Typography>
+            <Box
+              display={"flex"}
+              justifyContent={"center"}
+              alignContent={"center"}
+              gap={4}
+              data-aos="zoom-in"
             >
-              <GitHubIcon IconColor={"#ffffff"} IconWidth={30} />
-            </IconButton>
+              <IconButton
+                size="small"
+                href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
+              >
+                <LinkedinIcon IconColor={"#ffffff"} IconWidth={35} />
+              </IconButton>
+              <IconButton
+                size="small"
+                href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
+              >
+                <GitHubIcon IconColor={"#ffffff"} IconWidth={30} />
+              </IconButton>
+            </Box>
           </Box>
         </Box>
       </Box>
