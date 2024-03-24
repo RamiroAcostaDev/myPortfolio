@@ -19,7 +19,7 @@ export default function Hero() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <Container sx={{ background: "#181D2A" }} id="Inicio">
+    <Container id="Inicio">
       <Box
         display={"flex"}
         justifyContent={"center"}

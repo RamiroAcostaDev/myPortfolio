@@ -1,14 +1,8 @@
-import {
-  Container,
-  Box,
-  Typography,
-  TextField,
-  IconButton,
-  FormControl,
-} from "@mui/material";
+import { Container, Box, Typography, IconButton } from "@mui/material";
+import ContactForm from "./ContactForm";
+import TitleSections from "./TitleSections";
 import LinkedinIcon from "../assets/svg/LinkedinIcon";
 import GitHubIcon from "../assets/svg/GitHubIcon";
-import MailIcon from "../assets/svg/MailIcon";
 
 import { Noto_Sans_Thai } from "next/font/google";
 const NotoFont = Noto_Sans_Thai({
@@ -20,23 +14,15 @@ export default function Projects() {
   return (
     <Container id="Contacto">
       <Box
-        paddingTop={{ xs: 5, lg: 20 }}
-        paddingBottom={{ xs: 5, lg: 20 }}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
+        gap={5}
+        paddingTop={{ xs: 5, md: 10 }}
+        paddingBottom={{ xs: 10, md: 20 }}
       >
-        <Typography
-          pb={7}
-          variant="h4"
-          fontSize={{ xs: 30, lg: 40 }}
-          fontWeight="500"
-          color={"#ffffff"}
-          className={`${NotoFont.className} antialiased`}
-        >
-          Contacto
-        </Typography>
+        <TitleSections titleContent={"Contacto"} />
         <Box
           display={"flex"}
           justifyContent={"center"}
@@ -44,117 +30,64 @@ export default function Projects() {
           flexDirection={"column"}
           gap={4}
         >
-          <Box display={"flex"} flexDirection={"column"} gap={2}>
+          <Box display={"flex"} flexDirection={"column"}>
             <Typography
-              variant="h3"
-              fontSize={24}
-              fontWeight="500"
-              color={"#ffffff"}
-              className={`${NotoFont.className} antialiased`}
-              textAlign={"center"}
-            >
-              Get in touch
-            </Typography>
-            <Typography
-              width={250}
-              variant="inherit"
+              variant="p"
+              color="#ffffff"
               fontSize={14}
               fontWeight="300"
-              color={"#ffffff"}
+              width={{ xs: 300, lg: 500 }}
               className={`${NotoFont.className} antialiased`}
-              textAlign={"justify"}
+              align={"justify"}
+              data-aos="zoom-in"
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
-              iusto velit ipsum repudiandae, aspernatur quia doloribus! Aperiam
-              accusamus placeat ad eaque veniam minus accusantium. Ad quod
-              architecto dolorum facilis commodi.
+              Si tienes alguna pregunta, sugerencia o simplemente quieres
+              ponerte en contacto, no dudes en enviar un mensaje a través de
+              este formulario. Estoy emocionado por conocer tus ideas y trabajar
+              juntos en futuros proyectos.
             </Typography>
           </Box>
-          <Box
-            component="form"
-            display={"flex"}
-            flexDirection={"column"}
-            gap={2}
-            color="#ffffff"
-          >
-            <TextField
-              id="Nombre"
-              label="Nombre"
-              variant="outlined"
-              InputLabelProps={{
-                style: {
-                  color: "#ffffff",
-                },
-              }}
-            />
-            <TextField
-              id="Email"
-              label="Email"
-              variant="outlined"
-              InputLabelProps={{
-                style: {
-                  color: "#ffffff",
-                },
-              }}
-            />
-            <TextField
-              id="Comentarios"
-              label="Comentarios"
-              multiline
-              rows={4}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "white",
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "white",
-                  },
-                  "&.Mui-focused fieldset": {
-                    borderColor: "white",
-                  },
-                },
-              }}
-              InputLabelProps={{
-                style: {
-                  color: "#ffffff",
-                },
-              }}
-            />
+          <ContactForm />
 
+          <Box
+            display={"flex"}
+            justifyContent={"center"}
+            alignContent={"center"}
+            flexDirection={"column"}
+            gap={4}
+          >
+            <Typography
+              variant="p"
+              color="#ffffff"
+              fontSize={14}
+              fontWeight="300"
+              width={{ xs: 300, lg: 500 }}
+              className={`${NotoFont.className} antialiased`}
+              align={"center"}
+              data-aos="zoom-in"
+            >
+              También puedes visitar mis redes sociales
+            </Typography>
             <Box
               display={"flex"}
               justifyContent={"center"}
               alignContent={"center"}
               gap={4}
+              data-aos="zoom-in"
             >
               <IconButton
                 size="small"
                 href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
               >
-                <MailIcon IconColor={"#ffffff"} IconWidth={35} />
+                <LinkedinIcon IconColor={"#ffffff"} IconWidth={35} />
+              </IconButton>
+              <IconButton
+                size="small"
+                href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
+              >
+                <GitHubIcon IconColor={"#ffffff"} IconWidth={30} />
               </IconButton>
             </Box>
-          </Box>
-          <Box
-            pt={2}
-            display={"flex"}
-            justifyContent={"center"}
-            alignContent={"center"}
-            gap={4}
-          >
-            <IconButton
-              size="small"
-              href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
-            >
-              <LinkedinIcon IconColor={"#ffffff"} IconWidth={35} />
-            </IconButton>
-            <IconButton
-              size="small"
-              href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
-            >
-              <GitHubIcon IconColor={"#ffffff"} IconWidth={30} />
-            </IconButton>
           </Box>
         </Box>
       </Box>
