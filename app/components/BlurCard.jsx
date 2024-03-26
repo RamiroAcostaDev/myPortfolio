@@ -29,7 +29,7 @@ export default function BlurCard({
       justifyContent={"center"}
       alignItems={"center"}
       gap={2}
-      paddingBottom={{ xs: 5, md: 0 }}
+      paddingBottom={{ xs: 5, md: 2 }}
     >
       <Box
         onClick={handleClick}

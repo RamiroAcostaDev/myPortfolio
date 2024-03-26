@@ -35,7 +35,7 @@ export default function Projects() {
         <TitleSections titleContent={"Proyectos"} />
         <Box
           display={"flex"}
-          flexDirection={{ xs: "column", md: "row" }}
+          flexWrap={"wrap"}
           justifyContent={"center"}
           alignItems={"center"}
         >
