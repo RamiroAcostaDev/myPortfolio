@@ -46,21 +46,30 @@ export default function Education() {
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
-        flexDirection={{ xs: "column", lg: "row" }}
+        flexDirection={"column"}
         gap={5}
-        paddingTop={{ xs: 5, lg: 20 }}
-        paddingBottom={{ xs: 5, lg: 20 }}
+        paddingTop={{ xs: 5, md: 10 }}
+        paddingBottom={{ xs: 10, md: 5 }}
       >
-        <TitleSections titleContent={"Educación"} />
-        {educationItem.map(({ title, description, date, img }, index) => (
-          <EducationCard
-            key={index}
-            courseTitle={title}
-            courseDescription={description}
-            courseDate={date}
-            courseImg={img}
-          />
-        ))}
+        <Box>
+          <TitleSections titleContent={"Educación"} />
+        </Box>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          gap={3}
+          flexWrap={"wrap"}
+        >
+          {educationItem.map(({ title, description, date, img }, index) => (
+            <EducationCard
+              key={index}
+              courseTitle={title}
+              courseDescription={description}
+              courseDate={date}
+              courseImg={img}
+            />
+          ))}
+        </Box>
       </Box>
     </Container>
   );

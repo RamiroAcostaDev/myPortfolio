@@ -20,7 +20,7 @@ export default function Projects() {
         flexDirection={"column"}
         gap={5}
         paddingTop={{ xs: 5, md: 10 }}
-        paddingBottom={{ xs: 10, md: 20 }}
+        paddingBottom={{ xs: 10, md: 10 }}
       >
         <TitleSections titleContent={"Contacto"} />
         <Box
@@ -41,10 +41,9 @@ export default function Projects() {
               align={"justify"}
               data-aos="zoom-in"
             >
-              Si tienes alguna pregunta, sugerencia o simplemente quieres
-              ponerte en contacto, no dudes en enviar un mensaje a través de
-              este formulario. Estoy emocionado por conocer tus ideas y trabajar
-              juntos en futuros proyectos.
+              ¡Hablemos! Envíame un correo electrónico o contáctame a través de
+              mis redes sociales. Estoy emocionado por conocer tus ideas y
+              trabajar juntos en futuros proyectos.
             </Typography>
           </Box>
           <ContactForm />
