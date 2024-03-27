@@ -1,9 +1,15 @@
 "use client";
-import { Container, Box } from "@mui/material";
+import { Container, Box, IconButton, Typography } from "@mui/material";
 import TitleSections from "./TitleSections";
 import EducationCard from "./EducationCard";
+import CvIcon from "../assets/svg/CvIcon";
 
 import "aos/dist/aos.css";
+import { Noto_Sans_Thai } from "next/font/google";
+const NotoFont = Noto_Sans_Thai({
+  subsets: ["thai"],
+  weight: ["100", "200", "300", "400", "500", "700"],
+});
 
 const educationItem = [
   {
@@ -69,6 +75,27 @@ export default function Education() {
               courseImg={img}
             />
           ))}
+        </Box>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          flexDirection={"column"}
+          p={2}
+        >
+          <IconButton size="small" href={"/ConstructionPage"}>
+            <CvIcon IconColor={"#ffffff"} IconWidth={"40px"} />
+          </IconButton>
+          <Typography
+            variant="p"
+            color="#ffffff"
+            fontSize={14}
+            fontWeight="300"
+            className={`${NotoFont.className} antialiased`}
+            data-aos="zoom-in"
+          >
+            Descargar CV
+          </Typography>
         </Box>
       </Box>
     </Container>
