@@ -99,7 +99,7 @@ export default function Projects() {
               className={`${NotoFont.className} antialiased`}
               data-aos="zoom-in"
             >
-              ramiroacosta.dev@gmail.com
+              Ramiroacosta.dev@gmail.com
             </Typography>
           </Box>
         </Box>
