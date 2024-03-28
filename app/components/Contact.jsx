@@ -13,7 +13,7 @@ const NotoFont = Noto_Sans_Thai({
 
 export default function Projects() {
   return (
-    <Container id="Contacto">
+    <Container id="Contacto" sx={{ backgroundColor: "#21293B" }}>
       <Box
         display={"flex"}
         justifyContent={"center"}
@@ -53,7 +53,7 @@ export default function Projects() {
             flexDirection={"column"}
             gap={2}
             color="#ffffff"
-            backgroundColor="#21293B"
+            backgroundColor="#181D2A"
             justifyContent={"center"}
             alignItems={"center"}
             padding={5}
