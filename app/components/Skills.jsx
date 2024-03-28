@@ -76,21 +76,15 @@ const tools = [
 
 export default function Skills() {
   return (
-    <Container
-      id="Habilidades"
-      display={"flex"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      flexDirection={"column"}
-    >
+    <Container id="Habilidades">
       <Box
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
         gap={5}
-        paddingTop={{ xs: 5, lg: 20 }}
-        paddingBottom={{ xs: 5, lg: 20 }}
+        paddingTop={{ xs: 5, md: 10 }}
+        paddingBottom={{ xs: 10, md: 10 }}
       >
         <TitleSections titleContent={"Mis habilidades"} />
 
@@ -98,7 +92,6 @@ export default function Skills() {
           display={"flex"}
           justifyContent={"center"}
           alignItems={{ xs: "center", md: "flex-start" }}
-          flexDirection={{ xs: "column", md: "row" }}
           flexWrap={"wrap"}
           gap={{ xs: 4, md: 7 }}
         >

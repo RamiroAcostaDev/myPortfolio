@@ -23,7 +23,7 @@ export default function EducationCard({
 }) {
   return (
     <Card
-      sx={{ maxWidth: 300, backgroundColor: "#181D2A" }}
+      sx={{ width: "300px", backgroundColor: "#181D2A" }}
       data-aos="zoom-in"
       raised={true}
     >

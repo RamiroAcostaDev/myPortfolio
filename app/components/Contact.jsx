@@ -1,8 +1,9 @@
 import { Container, Box, Typography, IconButton } from "@mui/material";
-import ContactForm from "./ContactForm";
+
 import TitleSections from "./TitleSections";
 import LinkedinIcon from "../assets/svg/LinkedinIcon";
 import GitHubIcon from "../assets/svg/GitHubIcon";
+import MailIcon from "../assets/svg/MailIcon";
 
 import { Noto_Sans_Thai } from "next/font/google";
 const NotoFont = Noto_Sans_Thai({
@@ -12,7 +13,7 @@ const NotoFont = Noto_Sans_Thai({
 
 export default function Projects() {
   return (
-    <Container id="Contacto">
+    <Container id="Contacto" sx={{ backgroundColor: "#21293B" }}>
       <Box
         display={"flex"}
         justifyContent={"center"}
@@ -20,7 +21,7 @@ export default function Projects() {
         flexDirection={"column"}
         gap={5}
         paddingTop={{ xs: 5, md: 10 }}
-        paddingBottom={{ xs: 10, md: 20 }}
+        paddingBottom={{ xs: 10, md: 10 }}
       >
         <TitleSections titleContent={"Contacto"} />
         <Box
@@ -41,53 +42,65 @@ export default function Projects() {
               align={"justify"}
               data-aos="zoom-in"
             >
-              Si tienes alguna pregunta, sugerencia o simplemente quieres
-              ponerte en contacto, no dudes en enviar un mensaje a través de
-              este formulario. Estoy emocionado por conocer tus ideas y trabajar
-              juntos en futuros proyectos.
+              ¡Hablemos! Envíame un correo electrónico o contáctame a través de
+              mis redes sociales. Estoy emocionado por conocer tus ideas y
+              trabajar juntos en futuros proyectos.
             </Typography>
           </Box>
-          <ContactForm />
 
           <Box
             display={"flex"}
-            justifyContent={"center"}
-            alignContent={"center"}
             flexDirection={"column"}
-            gap={4}
+            gap={2}
+            color="#ffffff"
+            backgroundColor="#181D2A"
+            justifyContent={"center"}
+            alignItems={"center"}
+            padding={5}
+            borderRadius={2}
+            // boxShadow={5}
+            data-aos="zoom-in"
           >
+            <IconButton size="small" href={"/ConstructionPage"}>
+              <GitHubIcon IconColor={"#ffffff"} IconWidth={"40px"} />
+            </IconButton>
+
             <Typography
               variant="p"
               color="#ffffff"
               fontSize={14}
               fontWeight="300"
-              width={{ xs: 300, lg: 500 }}
               className={`${NotoFont.className} antialiased`}
-              align={"center"}
               data-aos="zoom-in"
             >
-              También puedes visitar mis redes sociales
+              Github.com/RamiroAcostaDev
             </Typography>
-            <Box
-              display={"flex"}
-              justifyContent={"center"}
-              alignContent={"center"}
-              gap={4}
+            <IconButton size="small" href={"/ConstructionPage"}>
+              <LinkedinIcon IconColor={"#ffffff"} IconWidth={"40px"} />
+            </IconButton>
+            <Typography
+              variant="p"
+              color="#ffffff"
+              fontSize={14}
+              fontWeight="300"
+              className={`${NotoFont.className} antialiased`}
               data-aos="zoom-in"
             >
-              <IconButton
-                size="small"
-                href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
-              >
-                <LinkedinIcon IconColor={"#ffffff"} IconWidth={35} />
-              </IconButton>
-              <IconButton
-                size="small"
-                href="https://www.youtube.com/watch?v=uIxLkXP-Ll8&ab_channel=Gabriela-Peengler"
-              >
-                <GitHubIcon IconColor={"#ffffff"} IconWidth={30} />
-              </IconButton>
-            </Box>
+              Linkedin.com/in/ramiroacostadev
+            </Typography>
+            <IconButton size="small" href={"/ConstructionPage"}>
+              <MailIcon IconColor={"#ffffff"} IconWidth={"40px"} />
+            </IconButton>
+            <Typography
+              variant="p"
+              color="#ffffff"
+              fontSize={14}
+              fontWeight="300"
+              className={`${NotoFont.className} antialiased`}
+              data-aos="zoom-in"
+            >
+              Ramiroacosta.dev@gmail.com
+            </Typography>
           </Box>
         </Box>
       </Box>

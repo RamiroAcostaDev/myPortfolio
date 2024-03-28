@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { Box } from "@mui/material";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Projects />
       <Education />
       <Contact />
+      <Footer />
     </Box>
   );
 }

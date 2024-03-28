@@ -1,9 +1,15 @@
 "use client";
-import { Container, Box } from "@mui/material";
+import { Container, Box, IconButton, Typography } from "@mui/material";
 import TitleSections from "./TitleSections";
 import EducationCard from "./EducationCard";
+import CvIcon from "../assets/svg/CvIcon";
 
 import "aos/dist/aos.css";
+import { Noto_Sans_Thai } from "next/font/google";
+const NotoFont = Noto_Sans_Thai({
+  subsets: ["thai"],
+  weight: ["100", "200", "300", "400", "500", "700"],
+});
 
 const educationItem = [
   {
@@ -46,21 +52,51 @@ export default function Education() {
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
-        flexDirection={{ xs: "column", lg: "row" }}
+        flexDirection={"column"}
         gap={5}
-        paddingTop={{ xs: 5, lg: 20 }}
-        paddingBottom={{ xs: 5, lg: 20 }}
+        paddingTop={{ xs: 5, md: 10 }}
+        paddingBottom={{ xs: 10, md: 5 }}
       >
-        <TitleSections titleContent={"Educación"} />
-        {educationItem.map(({ title, description, date, img }, index) => (
-          <EducationCard
-            key={index}
-            courseTitle={title}
-            courseDescription={description}
-            courseDate={date}
-            courseImg={img}
-          />
-        ))}
+        <Box>
+          <TitleSections titleContent={"Educación"} />
+        </Box>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          gap={3}
+          flexWrap={"wrap"}
+        >
+          {educationItem.map(({ title, description, date, img }, index) => (
+            <EducationCard
+              key={index}
+              courseTitle={title}
+              courseDescription={description}
+              courseDate={date}
+              courseImg={img}
+            />
+          ))}
+        </Box>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          flexDirection={"column"}
+          p={2}
+        >
+          <IconButton size="small" href={"/ConstructionPage"}>
+            <CvIcon IconColor={"#ffffff"} IconWidth={"40px"} />
+          </IconButton>
+          <Typography
+            variant="p"
+            color="#ffffff"
+            fontSize={14}
+            fontWeight="300"
+            className={`${NotoFont.className} antialiased`}
+            data-aos="zoom-in"
+          >
+            Descargar CV
+          </Typography>
+        </Box>
       </Box>
     </Container>
   );
