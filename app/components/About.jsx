@@ -31,7 +31,7 @@ export default function About() {
         >
           <Avatar
             alt="m"
-            src="https://as1.ftcdn.net/v2/jpg/02/43/12/34/1000_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+            src="/img/me.jpg"
             sx={{
               width: "200px",
               height: "200px",
