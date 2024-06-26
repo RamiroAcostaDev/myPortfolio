@@ -1,5 +1,5 @@
 # Mi portfolio personal 
-##Descripción:
+## Descripción:
 <p>
 Proyecto de portfolio personal, en formato landing page, con el objeto de servir como presentación de mis conocimientos, experiencias y habilidades profesionales como programador front end.
 </p>
